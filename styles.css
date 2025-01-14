@@ -1,0 +1,393 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #ffffff, #d3d8df);
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Navbar link default style */
+.navbar-nav .nav-link {
+    position: relative;
+    color: white; /* Default color for the text */
+    text-decoration: none; /* Removes underline */
+    transition: background 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+/* Hover effect for gradient text */
+.navbar-nav .nav-link:hover {
+    background: linear-gradient(90deg,  #0072ff, #00c6ff, #ffff); /* Vibrant gradient effect */
+    -webkit-background-clip: text; /* Clips gradient to text */
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+    color: transparent; /* Ensures gradient-only text visibility */
+}
+
+
+/* Home Container */
+.homecontainer {
+    display: flex;
+    height: auto; 
+    flex-direction: row; /* Maintain row layout on larger screens */
+}
+
+@media (max-width: 768px) {
+    .homecontainer {
+        flex-direction: column; /* Stack containers vertically on smaller screens */
+    }
+}
+
+/* Left Container */
+.left_container {
+    background-color: #262525;
+    color: #fff;
+    padding: 3rem;
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 2rem; /* Space between icons and content */
+}
+
+/* Icons Styling */
+.icons {
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 1rem; /* Space between each icon */
+    align-items: center; /* Center icons horizontally */
+    margin: 0; /* Remove unnecessary margins */
+    flex-wrap: wrap; 
+}
+@media (max-width: 768px) {
+    .icons a {
+        font-size: 1.2rem; /* Smaller icons for mobile screens */
+    }
+}
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    .content .detail {
+        font-size: 1rem; /* Smaller text for details */
+        line-height: 1.4; /* Adjust line height */
+    }
+}
+
+
+/* Content Styling */
+.content {
+    text-align: left; /* Align content to the left */
+}
+
+
+.icons a {
+    color: #fff; /* Icon color */
+    font-size: 2rem; /* Icon size */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.icons a:hover {
+    color: #5DB9EE; /* Change color on hover */
+}
+
+/* Contact Icons (Phone & Email) */
+.contact-icon {
+    font-size: 1.8rem; /* Adjust font size for phone/email icons */
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+    .icons a {
+        font-size: 1.5rem; /* Adjust icon size for smaller screens */
+    }
+}
+
+
+
+
+
+/* Right Container */
+
+.right_container {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh; /* Ensures the right section fills the entire viewport height */
+    width: 100%; /* Ensures full width */
+    position: relative; /* Helps manage positioning within the container */
+    overflow: hidden; /* Ensures no overflow issues */
+}
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .circle {
+        width: 70%; /* Adjusts circle size for smaller screens */
+    }
+
+    .design .circle {
+        width: 14rem; /* Smaller circle size for mobile */
+    }
+}
+
+
+/* Add these styles for better responsiveness */
+.content {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    padding: 1rem;
+}
+
+.detail {
+    max-width: 100%; /* Allow full width on smaller screens */
+}
+
+/* Intro Text */
+.content .intro {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.content .intro span {
+    color: #5DB9EE;
+}
+
+/* Typing Animation */
+.typing-container {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #333; /* Cursor effect */
+    animation: typing 4s steps(24, end) 1s forwards, blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24ch; /* Adjust based on text length */
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ffffff; /* White */
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+/* Content Header */
+.content h1 {
+    font-size: 3rem;
+    color: #5DB9EE;
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 38rem;
+    margin: 1rem 0 2rem;
+    line-height: 1.5rem;
+}
+
+/* Button Container */
+.btn_container button {
+    border: 0.1rem solid #5DB9EE;
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+button:nth-child(1) {
+    background-color: #5DB9EE;
+}
+
+button:nth-child(2) {
+    background-color: transparent;
+    color: #5DB9EE;
+}
+
+button:nth-child(1):hover {
+    background: transparent;
+    color: #5DB9EE;
+}
+
+button:nth-child(2):hover {
+    background: #5DB9EE;
+    color: #fff;
+}
+
+
+/* Section Styling */
+section {
+    padding: 50px;
+}
+
+h2 {
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left_container, .right_container {
+        width: 100%;
+    }
+
+    .navbar .navlist {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn_container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .right_container {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 2rem; /* Additional padding for smaller devices */
+    }
+
+    .circle {
+        width: 70%; /* Adjusts circle size for smaller screens */
+    }
+}
+
+
+/* About Section Styles */
+.about-section {
+    background: linear-gradient(135deg, #f9f9f9, #e6e9f0);
+    color: #333;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.text-muted {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.skills-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box .icon {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.icon-box h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.project-img {
+    width: 100%; /* Ensures the image fills the card width */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 200px; /* Restricts image height for consistency */
+    object-fit: cover; /* Crops image neatly if needed */
+}
+
+@media (min-width: 768px) {
+    .project-img {
+        max-height: 250px; /* Increases max height for larger screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-img {
+        max-height: 300px; /* Further adjusts for extra-large screens */
+    }
+}
+/* Project and Contact */
+ #skills ul, #portfolio .project {
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+}
+
+.project {
+    background-color: #f4f4f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#contact a {
+    color: #3877FF;
+    text-decoration: none;
+}
