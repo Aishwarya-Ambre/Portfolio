@@ -346,6 +346,9 @@ h2 {
     .design .circle {
         width: 14rem; /* Smaller circle size for mobile */
     }
+    section {
+        padding: 20px;
+    }
 }
 
 
